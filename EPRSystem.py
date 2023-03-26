@@ -1,13 +1,16 @@
 import random
 
-# Dataset for EPR Model
-def generate_EPR_result():
-    AL = [ 0, 0,-1, 0,+1,-1,+1, 0,-1,-1]
-    AR = [-1,+1, 0,-1, 0, 0, 0,+1, 0, 0]
-    BL = [+1,+1,+1, 0,-1, 0,-1, 0, 0,+1]
-    BR = [ 0, 0, 0,+1, 0,-1, 0,-1,+1, 0]
-    return (AL, AR, BL, BR)
+class EPRSystem:
+    def __init__(self):
+        # Dataset for EPR Model
+        self.AL = [ 0, 0,-1, 0,+1,-1,+1, 0,-1,-1]
+        self.AR = [-1,+1, 0,-1, 0, 0, 0,+1, 0, 0]
+        self.BL = [+1,+1,+1, 0,-1, 0,-1, 0, 0,+1]
+        self.BR = [ 0, 0, 0,+1, 0,-1, 0,-1,+1, 0]
 
+    def generate_EPR_result(self):
+        return (self.AL, self.AR, self.BL, self.BR)
+    
 
 def generate_EPR_result_(i):
     # Initialize list to store result
