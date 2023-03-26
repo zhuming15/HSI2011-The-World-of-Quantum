@@ -5,10 +5,13 @@ from EPRSystem import *
 ############# EPR Model #################
 print("---EPR Model---")
 
-# Define the measurement outcomes for each particle and observable
-AL, AR, BL, BR = generate_EPR_result()
+#Initialize EPR Model
+EPRModel = EPRSystem()
 
-# Run model and compute Bell Inequality
+# Define the measurement outcomes for each particle and observable
+AL, AR, BL, BR = EPRModel.generate_EPR_result()
+
+# Compute Bell Inequality of the dataset
 EPR_Model = BellInequality(AL, AR, BL, BR)
 EPR_Model.compute_Bell_Inequality()
 print("\n")
@@ -16,10 +19,12 @@ print("\n")
 ############# Quantum Model #################
 print("---Quantum Model---")
 
-# Define the measurement outcomes for each particle and observable
-QAL, QAR, QBL, QBR = generate_quantum_result(1000)
+# Initialize Quantum Model
+QuantumModel = QuantumSystem(0, math.pi/3, math.pi/4, -math.pi/4)
 
-# Run Model and compute Bell Inequality
+# Define the measurement outcomes for each particle and observable
+QAL, QAR, QBL, QBR = QuantumModel.generate_quantum_result(1000)
+
+# Compute Bell Inequality of the dataset
 Q_Model = BellInequality(QAL, QAR, QBL, QBR)
 Q_Model.compute_Bell_Inequality()
-
