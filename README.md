@@ -1,5 +1,5 @@
-# HSI2013-The-World-of-Quantum
-Welcome to the HSI2013-The-World-of-Quantum GitHub repository! 
+# HSI2011-The-World-of-Quantum
+Welcome to the HSI2011-The-World-of-Quantum GitHub repository! 
 
 # Introduction
 The project consists of four parts:
